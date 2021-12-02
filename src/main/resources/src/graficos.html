@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Graficos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="styles/header_footer.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/plataforma.css" />
+    <script src="https://kit.fontawesome.com/639a3ddda3.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5efd0e313d.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navegação -->
+    <header class="header">
+        <div class="row main_menu">
+            <div class="logo col-12 col-sm-12 col-md-12 col-lg-4">
+                <a href="../index.html"><img class="logo-top" src="./assets/spare.png" alt="Logo" /></a>
+            </div>
+
+            <div class="navbar col-12 col-sm-12 col-md-12 col-lg-8">
+                <!-- Menu Mobile -->
+                <input type="checkbox" id="menuToggle" />
+                <label for="menuToggle" class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times-circle"></i>
+                </label>
+                <!-- Menu mais detalhado -->
+                <nav class="nav menu1">
+                    <a class="nav-link active" href="./plataforma.html">Plataforma Spare</a>
+                    <a class="nav-link" href="./blog.html">Blog Spare</a>
+                    <a class="nav-link" href="about_contact_page.html">Contatos</a>
+                    <a class="nav-link" href="#" onclick="loginTeste()">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar"> 
+            <input type="checkbox" id="sidebarToggle"/>
+                <label for="sidebarToggle" class="sidebar-icon">
+                    <i class="fas fa-ellipsis-v"></i>
+                    <i class="fa fa-times"></i>
+                </label>
+            <ul class="nav_list">
+                <li class="side-item">
+                    <a href="graficos.html">
+                        <i class="fas fa-chart-bar" id="sidebar_icon"></i>
+                    <p>
+                        <span class="links_name">Gráficos</span>
+                    </p>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="metas.html">
+                        <i class="fas fa-bullseye" id="sidebar_icon"></i>
+                    <p>
+                        <span class="links_name">Metas</span>
+                    </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="container-graficos" class="container">
+            <div class="row" style="align-items:center;">
+                <div class="col-6">
+                    <h1>Graficos:</h1>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-2">
+                    <select name="select" class="opcao" id="dropdownMenuButton" onchange="fazerGrafico()">
+                        <option id="mesAtual" class="meses">Meses</option>
+                        <option class="meses" value="-01-">Janeiro</option>
+                        <option class="meses" value="-02-">Fevereiro</option>
+                        <option class="meses" value="-03-">Março</option>
+                        <option class="meses" value="-04-">Abril</option>
+                        <option class="meses" value="-05-">Maio</option>
+                        <option class="meses" value="-06-">Junho</option>
+                        <option class="meses" value="-07-">Julho</option>
+                        <option class="meses" value="-08-">Agosto</option>
+                        <option class="meses" value="-09-">Setembro</option>
+                        <option class="meses" value="-10-">Outubro</option>
+                        <option class="meses" value="-11-">Novembro</option>
+                        <option class="meses" value="-12-">Dezembro</option>
+                    </select>
+                </div>
+                <div class="row" style="width: 100%; margin: 80px 0px;">
+                    <div class="col-12">
+                        <h1 id="texto-erro"></h1>
+                        <div id="grafico"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="row menu_footer">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="https://www.facebook.com/" target="_blank" class="icone">
+                            <i class="fab fa-facebook fa-3x"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="https://twitter.com/home" target="_blank" class="icone">
+                            <i class="fab fa-twitter fa-3x"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="https://www.instagram.com/" target="_blank" class="icone">
+                            <i class="fab fa-instagram fa-3x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <p class="copyright">© Copyright 2000-2021 PUC Minas</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <p class="logo_footer">
+                    <img class="logo-top" src="./assets/spare.png" alt="Logo" />
+                </p>
+            </div>
+        </div>
+    </footer>
+      <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+      </script>
+      <script>
+          (function () {
+              window.onload = function () {
+                  new BlipChat()
+                  .withAppKey('dGVzdGVzcGFyZTpjNTAxMjliNy1kMjYzLTRkZjktOWIzNC1jNTJiMGUxMWY3YTg=')
+                  .withButton({"color":"#2CC3D5","icon":""})
+                  .withCustomCommonUrl('https://joana-moreira-rezende-woldaynsky-usrry.chat.blip.ai/')
+                  .build();
+              }
+          })();
+      </script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="/src/scripts/plataforma.js"></script>
+	<script src="scripts/login-test.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
