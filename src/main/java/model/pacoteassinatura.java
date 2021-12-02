@@ -37,7 +37,7 @@ public class pacoteassinatura {
         return preco;
     }
 
-    public void setPreço(double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
