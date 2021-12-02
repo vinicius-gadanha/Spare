@@ -47,8 +47,6 @@ public class UsuarioService {
 				return json;
 			}
 			else {
-				System.out.println("o nome do usuario no banco é: "+tmp[i].getNomeUsuario()+"\n e o nome do login enviado foi: "+nome_usuario);
-				System.out.println("a senha do usuario no banco é: "+tmp[i].getSenha()+"\n e a senha do login enviado foi: "+senha_usuario);
 				System.out.print("fracasso!");
 			}
 		}

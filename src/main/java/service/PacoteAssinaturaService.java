@@ -14,7 +14,7 @@ private DAOPacoteAssinatura assinaturaDAO;
 		assinaturaDAO.conectar();
 	}
 	public Object add(Request request, Response response) {
-	    String preco = request.queryParams("preço");
+	    String preco = request.queryParams("preco");
 	    double preco_db = Double.parseDouble(preco);
 	    String tipo = request.queryParams("tipo");
 	    int id = assinaturaDAO.getMaxId();

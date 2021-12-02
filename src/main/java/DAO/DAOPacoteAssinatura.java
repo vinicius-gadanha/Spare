@@ -64,7 +64,7 @@ public class DAOPacoteAssinatura {
 		try {
 			Statement st = conexao.createStatement();
 			st.executeUpdate("INSERT INTO pacoteassinatura (id, preço, tipo) " + "VALUES (" + pacoteassinatura.getID() + ", '"
-					+ pacoteassinatura.getPreço() + "', '" + pacoteassinatura.getTipo() + "');");
+					+ pacoteassinatura.getPreco() + "', '" + pacoteassinatura.getTipo() + "');");
 			st.close();
 			status = true;
 		} catch (SQLException u) {
@@ -78,7 +78,7 @@ public class DAOPacoteAssinatura {
         try {
             Statement st = conexao.createStatement();
             String sql = "UPDATE pacoteassinatura SET tipo = '" + PacoteAssinatura.getTipo() + "', preço = "
-                    + PacoteAssinatura.getPreço() + " WHERE id = " + PacoteAssinatura.getID();
+                    + PacoteAssinatura.getPreco() + " WHERE id = " + PacoteAssinatura.getID();
             st.executeUpdate(sql);
             st.close();
             status = true;

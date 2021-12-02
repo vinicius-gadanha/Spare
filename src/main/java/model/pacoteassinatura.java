@@ -3,18 +3,18 @@ package model;
 public class pacoteassinatura {
     private int id;
     private String tipo;
-    private double preço;
+    private double preco;
 
     public pacoteassinatura() {
         this.id = 0;
         this.tipo = "";
-        this.preço = 0;
+        this.preco = 0;
     }
 
-    public pacoteassinatura(int id, String tipo, double preço) {
+    public pacoteassinatura(int id, String tipo, double preco) {
         this.id = id;
         this.tipo = tipo;
-        this.preço = preço;
+        this.preco = preco;
     }
 
     public int getID() {
@@ -33,16 +33,16 @@ public class pacoteassinatura {
         this.tipo = tipo;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreço(double preco) {
+        this.preco = preco;
     }
 
     @Override
     public String toString() {
-        return "PacoteAssinatura [id=" + id + ", tipo=" + tipo + ", preço=" + preço + "]";
+        return "PacoteAssinatura [id=" + id + ", tipo=" + tipo + ", preco=" + preco + "]";
     }
 }
